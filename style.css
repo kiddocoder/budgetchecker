@@ -1,0 +1,148 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      :root{
+      --white:white;
+      }
+      body{
+      font-family: "Poppins",sans-serif;
+      }
+      .header{
+      width: 100vw;
+      height: 17rem;
+      background-image: url(assets/images/back.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      }
+      .header .content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      }
+      .header .content{
+      margin-top: 20px;
+      color: var(--white);
+      letter-spacing: 0.055rem;
+      }
+      .header .content .budgetcounter{
+      height: 25px;
+      letter-spacing: 0.15rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight:200;
+      font-size:30px ;
+      }
+      .calculation{
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      gap: 10px;
+      }
+      .header .content  .incomes,.header .content .expenses{
+      width: 350px;
+      height: 50px;
+      background: hsl(175, 58%, 46%);
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      font-size: 12px;
+      }
+      .inc{
+      color: #31b9ae;
+      }
+      .exp{
+      color:#b93138;
+      }
+      .header .content  .expenses{
+      background: hsl(357, 58%, 46%);
+      }
+      .header .content  .incomes .incomevalue{
+      margin-right:45px;
+      }
+      .header .content  .incomes .incomevalue,.header .content  .expenses .expensevalue{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: white;
+      }
+      .header .content  .expenses .percent,.percent{
+      background-color: rgba(166, 166, 166, 0.341);
+      font-size: 11px;
+      padding: 5px;
+      color: white;
+      border-radius: 5px;
+      }
+      .results .percent{
+      color: inherit;
+      }
+      .usercontrols form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      background-color: rgb(226, 222, 222);
+      }
+      .usercontrols .content,.usercontrols .content.description{
+      height: 30px;
+      width: 30rem;
+      padding: 5px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-size: 15px;
+      }
+      .usercontrols .content.placed,.usercontrols .content.selected{
+      width: 70px;
+      }
+      .usercontrols form>button{
+      background-color: rgb(226, 222, 222);
+      outline: none;
+      border: none;
+      cursor: pointer;
+      }
+      .results{
+      margin-top:10px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      }
+      .results >div ul{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      }
+      .results > div:nth-child(even) ul li:nth-child(odd) {
+            background-color:white;
+          }
+      .results >div ul li{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      width: 30rem;
+      max-width: 50rem;
+      background-color: rgb(226, 222, 222); 
+      border: 1px solid rgba(146, 144, 144, 0.203);
+      }
+      .results >div ul li div:last-child{
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+      }
+     .remove{
+      display: none;
+      transition: display 5s ease-in;
+     }
+     .results >div ul li .calcul:hover .remove{
+      display: block;
+     }

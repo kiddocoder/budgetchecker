@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget Plan</title>
+</head>
+<body>
+<div class="header">
+    <div class="content">
+        <div class="currentdate">
+            <span>Available Budget in</span>
+            <span class="date"></span>
+        </div>
+        <div class="budgetcounter">
+            <span></span>
+        </div>
+        <div class="calculation">
+            <div class="incomes">
+                <span>INCOME</span>
+                <span class="incomevalue"></span>
+            </div>
+            <div class="expenses">
+                <span>EXPENSES</span>
+                <div class="expensescounter">
+                    <span class="expensevalue"></span>
+                    <span class="percent"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="usercontrols">
+    <form id="myform">
+        <select name="type" class="selected content" id="">
+            <option value="income">+</option>
+            <option value="expense">-</option>
+        </select>
+        <input name="description" class="description content" type="text" placeholder="Add description">
+        <input name="amount" class="placed content" type="number" min="0.01" step="0.01" placeholder="value" required>
+        <button id="save" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25">
+                <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" fill="blue"/>
+            </svg>
+        </button>
+        <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+        </svg>
+    </form>
+</div>
+<div class="results">
+    <div class="incomeresult">
+        <h4 class="title inc">INCOME</h4>
+        <ul id="incomelist"></ul>
+    </div>
+    <div class="expensesresult">
+        <h4 class="title exp">EXPENSES</h4>
+        <ul id="expenseslist"></ul>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
